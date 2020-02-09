@@ -1,0 +1,177 @@
+INFO:main.py:line 10:  Initiated program
+URL-UPDATE:main.py:line 56:  Started gathering for https://google.com/.
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): google.com:443
+DEBUG:connectionpool.py:line 437:  https://google.com:443 "GET / HTTP/1.1" 301 220
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): www.google.com:443
+DEBUG:connectionpool.py:line 437:  https://www.google.com:443 "GET / HTTP/1.1" 200 None
+URL-UPDATE:main.py:line 83:  Finished gathering for https://google.com/.
+INFO:main.py:line 150:  Start get URLS for https://google.com/
+INFO:main.py:line 166:  End get URLS for https://google.com/
+DEPTH-CHANGE:main.py:line 191:  Changed by +1. From 0 to 1.
+URL-UPDATE:main.py:line 56:  Started gathering for https://www.google.com/imghp.
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): www.google.com:443
+DEBUG:connectionpool.py:line 437:  https://www.google.com:443 "GET /imghp HTTP/1.1" 200 None
+URL-UPDATE:main.py:line 83:  Finished gathering for https://www.google.com/imghp.
+INFO:main.py:line 150:  Start get URLS for https://www.google.com/imghp
+INFO:main.py:line 166:  End get URLS for https://www.google.com/imghp
+DEPTH-CHANGE:main.py:line 200:  Changed by -1. From 1 to 0.
+DEPTH-CHANGE:main.py:line 191:  Changed by +1. From 0 to 1.
+URL-UPDATE:main.py:line 56:  Started gathering for https://maps.google.com/maps.
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): maps.google.com:443
+DEBUG:connectionpool.py:line 437:  https://maps.google.com:443 "GET /maps HTTP/1.1" 302 224
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): www.google.com:443
+DEBUG:connectionpool.py:line 437:  https://www.google.com:443 "GET /maps HTTP/1.1" 200 None
+URL-UPDATE:main.py:line 83:  Finished gathering for https://maps.google.com/maps.
+INFO:main.py:line 150:  Start get URLS for https://maps.google.com/maps
+INFO:main.py:line 166:  End get URLS for https://maps.google.com/maps
+DEPTH-CHANGE:main.py:line 200:  Changed by -1. From 1 to 0.
+DEPTH-CHANGE:main.py:line 191:  Changed by +1. From 0 to 1.
+URL-UPDATE:main.py:line 56:  Started gathering for https://play.google.com/.
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): play.google.com:443
+DEBUG:connectionpool.py:line 437:  https://play.google.com:443 "GET / HTTP/1.1" 302 0
+DEBUG:connectionpool.py:line 437:  https://play.google.com:443 "GET /store HTTP/1.1" 200 None
+URL-UPDATE:main.py:line 83:  Finished gathering for https://play.google.com/.
+INFO:main.py:line 150:  Start get URLS for https://play.google.com/
+INFO:main.py:line 166:  End get URLS for https://play.google.com/
+DEPTH-CHANGE:main.py:line 200:  Changed by -1. From 1 to 0.
+DEPTH-CHANGE:main.py:line 191:  Changed by +1. From 0 to 1.
+URL-UPDATE:main.py:line 56:  Started gathering for https://www.youtube.com/.
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): www.youtube.com:443
+DEBUG:connectionpool.py:line 437:  https://www.youtube.com:443 "GET / HTTP/1.1" 200 None
+URL-UPDATE:main.py:line 83:  Finished gathering for https://www.youtube.com/.
+INFO:main.py:line 150:  Start get URLS for https://www.youtube.com/
+INFO:main.py:line 166:  End get URLS for https://www.youtube.com/
+DEPTH-CHANGE:main.py:line 200:  Changed by -1. From 1 to 0.
+DEPTH-CHANGE:main.py:line 191:  Changed by +1. From 0 to 1.
+URL-UPDATE:main.py:line 56:  Started gathering for https://news.google.com/nwshp.
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): news.google.com:443
+DEBUG:connectionpool.py:line 437:  https://news.google.com:443 "GET /nwshp HTTP/1.1" 302 0
+DEBUG:connectionpool.py:line 437:  https://news.google.com:443 "GET /?hl=en-US&gl=US&ceid=US:en HTTP/1.1" 200 None
+URL-UPDATE:main.py:line 83:  Finished gathering for https://news.google.com/nwshp.
+INFO:main.py:line 150:  Start get URLS for https://news.google.com/nwshp
+INFO:main.py:line 166:  End get URLS for https://news.google.com/nwshp
+DEPTH-CHANGE:main.py:line 200:  Changed by -1. From 1 to 0.
+DEPTH-CHANGE:main.py:line 191:  Changed by +1. From 0 to 1.
+URL-UPDATE:main.py:line 56:  Started gathering for https://mail.google.com/mail/.
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): mail.google.com:443
+DEBUG:connectionpool.py:line 437:  https://mail.google.com:443 "GET /mail/ HTTP/1.1" 302 None
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): accounts.google.com:443
+DEBUG:connectionpool.py:line 437:  https://accounts.google.com:443 "GET /ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1 HTTP/1.1" 200 None
+URL-UPDATE:main.py:line 83:  Finished gathering for https://mail.google.com/mail/.
+INFO:main.py:line 150:  Start get URLS for https://mail.google.com/mail/
+INFO:main.py:line 166:  End get URLS for https://mail.google.com/mail/
+DEPTH-CHANGE:main.py:line 200:  Changed by -1. From 1 to 0.
+DEPTH-CHANGE:main.py:line 191:  Changed by +1. From 0 to 1.
+URL-UPDATE:main.py:line 56:  Started gathering for https://drive.google.com/.
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): drive.google.com:443
+DEBUG:connectionpool.py:line 437:  https://drive.google.com:443 "GET / HTTP/1.1" 302 0
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): accounts.google.com:443
+DEBUG:connectionpool.py:line 437:  https://accounts.google.com:443 "GET /ServiceLogin?service=wise&passive=1209600&continue=https://drive.google.com/&followup=https://drive.google.com/&emr=1 HTTP/1.1" 200 None
+URL-UPDATE:main.py:line 83:  Finished gathering for https://drive.google.com/.
+INFO:main.py:line 150:  Start get URLS for https://drive.google.com/
+INFO:main.py:line 166:  End get URLS for https://drive.google.com/
+DEPTH-CHANGE:main.py:line 200:  Changed by -1. From 1 to 0.
+DEPTH-CHANGE:main.py:line 191:  Changed by +1. From 0 to 1.
+URL-UPDATE:main.py:line 56:  Started gathering for https://www.google.com/intl/en/about/products.
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): www.google.com:443
+DEBUG:connectionpool.py:line 437:  https://www.google.com:443 "GET /intl/en/about/products HTTP/1.1" 301 234
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): about.google:443
+DEBUG:connectionpool.py:line 437:  https://about.google:443 "GET /intl/en/products HTTP/1.1" 301 235
+DEBUG:connectionpool.py:line 437:  https://about.google:443 "GET /intl/en/products/ HTTP/1.1" 200 429667
+URL-UPDATE:main.py:line 83:  Finished gathering for https://www.google.com/intl/en/about/products.
+INFO:main.py:line 150:  Start get URLS for https://www.google.com/intl/en/about/products
+INFO:main.py:line 166:  End get URLS for https://www.google.com/intl/en/about/products
+DEPTH-CHANGE:main.py:line 200:  Changed by -1. From 1 to 0.
+DEPTH-CHANGE:main.py:line 191:  Changed by +1. From 0 to 1.
+URL-UPDATE:main.py:line 56:  Started gathering for http://www.google.com/history/optout.
+DEBUG:connectionpool.py:line 225:  Starting new HTTP connection (1): www.google.com:80
+DEBUG:connectionpool.py:line 437:  http://www.google.com:80 "GET /history/optout HTTP/1.1" 301 0
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): www.google.com:443
+DEBUG:connectionpool.py:line 437:  https://www.google.com:443 "GET /history/optout HTTP/1.1" 200 None
+URL-UPDATE:main.py:line 83:  Finished gathering for http://www.google.com/history/optout.
+INFO:main.py:line 150:  Start get URLS for http://www.google.com/history/optout
+INFO:main.py:line 166:  End get URLS for http://www.google.com/history/optout
+DEPTH-CHANGE:main.py:line 200:  Changed by -1. From 1 to 0.
+DEPTH-CHANGE:main.py:line 191:  Changed by +1. From 0 to 1.
+URL-UPDATE:main.py:line 56:  Started gathering for https://google.com//preferences.
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): google.com:443
+DEBUG:connectionpool.py:line 437:  https://google.com:443 "GET //preferences HTTP/1.1" 301 231
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): www.google.com:443
+DEBUG:connectionpool.py:line 437:  https://www.google.com:443 "GET /preferences HTTP/1.1" 200 None
+URL-UPDATE:main.py:line 83:  Finished gathering for https://google.com//preferences.
+INFO:main.py:line 150:  Start get URLS for https://google.com//preferences
+INFO:main.py:line 166:  End get URLS for https://google.com//preferences
+DEPTH-CHANGE:main.py:line 200:  Changed by -1. From 1 to 0.
+DEPTH-CHANGE:main.py:line 191:  Changed by +1. From 0 to 1.
+URL-UPDATE:main.py:line 56:  Started gathering for https://accounts.google.com/ServiceLogin.
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): accounts.google.com:443
+DEBUG:connectionpool.py:line 437:  https://accounts.google.com:443 "GET /ServiceLogin HTTP/1.1" 200 None
+URL-UPDATE:main.py:line 83:  Finished gathering for https://accounts.google.com/ServiceLogin.
+INFO:main.py:line 150:  Start get URLS for https://accounts.google.com/ServiceLogin
+INFO:main.py:line 166:  End get URLS for https://accounts.google.com/ServiceLogin
+DEPTH-CHANGE:main.py:line 200:  Changed by -1. From 1 to 0.
+DEPTH-CHANGE:main.py:line 191:  Changed by +1. From 0 to 1.
+URL-UPDATE:main.py:line 56:  Started gathering for https://google.com//advanced_search.
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): google.com:443
+DEBUG:connectionpool.py:line 437:  https://google.com:443 "GET //advanced_search HTTP/1.1" 301 235
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): www.google.com:443
+DEBUG:connectionpool.py:line 437:  https://www.google.com:443 "GET /advanced_search HTTP/1.1" 200 None
+URL-UPDATE:main.py:line 83:  Finished gathering for https://google.com//advanced_search.
+INFO:main.py:line 150:  Start get URLS for https://google.com//advanced_search
+INFO:main.py:line 166:  End get URLS for https://google.com//advanced_search
+DEPTH-CHANGE:main.py:line 200:  Changed by -1. From 1 to 0.
+DEPTH-CHANGE:main.py:line 191:  Changed by +1. From 0 to 1.
+URL-UPDATE:main.py:line 56:  Started gathering for https://google.com//intl/en/ads/.
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): google.com:443
+DEBUG:connectionpool.py:line 437:  https://google.com:443 "GET //intl/en/ads/ HTTP/1.1" 301 232
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): www.google.com:443
+DEBUG:connectionpool.py:line 437:  https://www.google.com:443 "GET /intl/en/ads/ HTTP/1.1" 301 233
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): ads.google.com:443
+DEBUG:connectionpool.py:line 437:  https://ads.google.com:443 "GET /intl/en/home/ HTTP/1.1" 200 97990
+URL-UPDATE:main.py:line 83:  Finished gathering for https://google.com//intl/en/ads/.
+INFO:main.py:line 150:  Start get URLS for https://google.com//intl/en/ads/
+INFO:main.py:line 166:  End get URLS for https://google.com//intl/en/ads/
+DEPTH-CHANGE:main.py:line 200:  Changed by -1. From 1 to 0.
+DEPTH-CHANGE:main.py:line 191:  Changed by +1. From 0 to 1.
+URL-UPDATE:main.py:line 56:  Started gathering for https://google.com//services/.
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): google.com:443
+DEBUG:connectionpool.py:line 437:  https://google.com:443 "GET //services/ HTTP/1.1" 301 229
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): www.google.com:443
+DEBUG:connectionpool.py:line 437:  https://www.google.com:443 "GET /services/ HTTP/1.1" 200 86169
+URL-UPDATE:main.py:line 83:  Finished gathering for https://google.com//services/.
+INFO:main.py:line 150:  Start get URLS for https://google.com//services/
+INFO:main.py:line 166:  End get URLS for https://google.com//services/
+DEPTH-CHANGE:main.py:line 200:  Changed by -1. From 1 to 0.
+DEPTH-CHANGE:main.py:line 191:  Changed by +1. From 0 to 1.
+URL-UPDATE:main.py:line 56:  Started gathering for https://google.com//intl/en/about.html.
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): google.com:443
+DEBUG:connectionpool.py:line 437:  https://google.com:443 "GET //intl/en/about.html HTTP/1.1" 301 238
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): www.google.com:443
+DEBUG:connectionpool.py:line 437:  https://www.google.com:443 "GET /intl/en/about.html HTTP/1.1" 301 234
+DEBUG:connectionpool.py:line 437:  https://www.google.com:443 "GET /intl/en/about/ HTTP/1.1" 301 226
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): about.google:443
+DEBUG:connectionpool.py:line 437:  https://about.google:443 "GET /intl/en/ HTTP/1.1" 200 78090
+URL-UPDATE:main.py:line 83:  Finished gathering for https://google.com//intl/en/about.html.
+INFO:main.py:line 150:  Start get URLS for https://google.com//intl/en/about.html
+INFO:main.py:line 166:  End get URLS for https://google.com//intl/en/about.html
+DEPTH-CHANGE:main.py:line 200:  Changed by -1. From 1 to 0.
+DEPTH-CHANGE:main.py:line 191:  Changed by +1. From 0 to 1.
+URL-UPDATE:main.py:line 56:  Started gathering for https://google.com//intl/en/policies/privacy/.
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): google.com:443
+DEBUG:connectionpool.py:line 437:  https://google.com:443 "GET //intl/en/policies/privacy/ HTTP/1.1" 301 245
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): www.google.com:443
+DEBUG:connectionpool.py:line 437:  https://www.google.com:443 "GET /intl/en/policies/privacy/ HTTP/1.1" 200 1187
+URL-UPDATE:main.py:line 83:  Finished gathering for https://google.com//intl/en/policies/privacy/.
+INFO:main.py:line 150:  Start get URLS for https://google.com//intl/en/policies/privacy/
+INFO:main.py:line 166:  End get URLS for https://google.com//intl/en/policies/privacy/
+DEPTH-CHANGE:main.py:line 200:  Changed by -1. From 1 to 0.
+DEPTH-CHANGE:main.py:line 191:  Changed by +1. From 0 to 1.
+URL-UPDATE:main.py:line 56:  Started gathering for https://google.com//intl/en/policies/terms/.
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): google.com:443
+DEBUG:connectionpool.py:line 437:  https://google.com:443 "GET //intl/en/policies/terms/ HTTP/1.1" 301 243
+DEBUG:connectionpool.py:line 959:  Starting new HTTPS connection (1): www.google.com:443
+DEBUG:connectionpool.py:line 437:  https://www.google.com:443 "GET /intl/en/policies/terms/ HTTP/1.1" 200 1117
+URL-UPDATE:main.py:line 83:  Finished gathering for https://google.com//intl/en/policies/terms/.
+INFO:main.py:line 150:  Start get URLS for https://google.com//intl/en/policies/terms/
+INFO:main.py:line 166:  End get URLS for https://google.com//intl/en/policies/terms/
+DEPTH-CHANGE:main.py:line 200:  Changed by -1. From 1 to 0.
