@@ -2,7 +2,10 @@
 
 #Import modules###################################################################################################################################################################################################
 import requests, re, time, sys, os, calendar, logging
-with open('main.log', 'w'):
+from ratelimit import limits, sleep_and_retry
+
+#Setup modules##############################################################################################################################################################################################################
+with open('./temp/main.log', 'w'):
     pass
 logging.basicConfig(filename='main.log',format='%(levelname)s:%(filename)s:line %(lineno)d:  %(message)s', level=logging.DEBUG)
 logging.addLevelName(60,'URL-UPDATE')
@@ -52,10 +55,25 @@ fc.write('```mermaid\ngraph LR\n')
 
 #Page class###################################################################################################################################################################################################
 class Page():
+  @sleep_and_retry
+  @limits(calls=10, period=30)
   def __init__(self,url):
     logging.log(60,'Started gathering for {}.'.format(url))
+
     try:
-      with requests.get(url) as p:
+      with requests.head(url) as p:
+        #print(sys.getsizeof(p.content))
+        #print(p.status_code)
+
+        if (p.status_code >= 300) and (p.status_code < 400):
+          logging.info('Redirected from {} to {}.'.format(url,p.headers['Location']))
+          ou = url
+          url = p.headers['Location']
+          try:
+            p = requests.head(url)
+          except:
+            p = requests.head(ou+'/')
+            logging.warning('Tried to redirect from {} to {}, went to {} instead.'.format(ou,url,ou+'/'))
         if p.status_code != 200:
           logging.warning('When looking at {}, found response code {} instead of 200.'.format(url,p.status_code))
           self.content = 'invalid response code'
@@ -63,12 +81,13 @@ class Page():
           logging.warning('When looking at {}, found content type {} instead of text/html.'.format(url,p.headers['content-type'].split(';')[0]))
           self.content = 'invalid content type'          
         else:
-          self.response = p
+          p = requests.get(url)
           try:
             self.encoding = p.headers['content-type'].split(';')[1]
           except:
             self.encoding = 'Not Provided'
           self.content = str(p.content)#.decode('utf-8')
+          # print(sys.getsizeof(self.content))
     except requests.exceptions.ConnectionError:
       logging.warning('Could not find server for {}.'.format(url))
     self.url = url
@@ -100,6 +119,10 @@ def makeAbsolute(urls,domain,base):
   for y in urls:
     try:
       x = re.findall('(?<=)(.*)(?=\?)',y)[0]
+    except:
+      x = y
+    try:
+      x = x.replace('"','')
     except:
       x = y
     if x == '':
@@ -150,7 +173,7 @@ def main(base):
   logging.info('Start get URLS for ' + base)
   urls = makeAbsolute(page.getURLS(),page.domain,base)
   for x in re.findall('>.*?<',page.content):
-    words = words + ' ' + x.replace('>','').replace('<','')
+    words = words + ' ' + x.replace('>','').replace('<','').replace('the','')
   upp.append(len(urls))
   if maxlinks != 'No Restriction':
     urls = urls[0:maxlinks]
@@ -243,7 +266,7 @@ fl.sort(reverse=True)
 for x in fl:
   f.write(x + '\n')
 
-print('\n\n\n\n\n\n\n\n\Gathered about ' + str(amo) + ' pages, at depth ' + str(1) + '. The base url was ' + baseurl + '.')
+print('\n\n\n\n\n\n\n\nGathered about ' + str(amo) + ' pages, at depth ' + str(1) + '. The base url was ' + baseurl + '.')
 if len(errors) != 0:
   print('\nSome errors occured: ' + str(errors))
 else:
@@ -263,9 +286,6 @@ f.close()
 w.close()
 os.chdir('/home/runner/sci/')
 
-#print('Flowchart File Size: {} bytes'.format(os.path.getsize('./temp/fc')))
-#print('Words Ranking Size: {} bytes'.format(os.path.getsize('./temp/words')))
-#print('URLS List Size: {} bytes'.format(os.path.getsize('./temp/urls')))
 g = 0
 for x in upp:
   g = g + x
@@ -274,8 +294,7 @@ print('Average URLS per page: {}'.format(g/len(upp)))
 endtime = calendar.timegm(time.gmtime())
 
 open('./temp/meta','w+').write('Base URL: ' + baseinitial + '\nTime: ' + str(endtime-startime) + ' seconds\n' + str(len(errors)) + ' errors\nDepth: ' + str(maxdepth+2) + '\n# of Pages: ' + str(amo) + '\nMax links per page: ' + str(maxlinks) + '\nFlowchart File Size: {} bytes\n'.format(os.path.getsize('./temp/fc')) + 'Word Ranking File Size: {} bytes\n'.format(os.path.getsize('./temp/words')) + 'URLS List File Size: {} bytes\n'.format(os.path.getsize('./temp/urls')))
-os.system('tar cf ' + nnn.replace('.com/','').replace('/','') + '@' + str(maxdepth+1) + '.scrap fc meta urls words')
+os.system('tar cf ' + nnn.replace('.com/','').replace('/','') + '@' + str(maxdepth+1) + '.scrap ./temp/fc ./temp/meta ./temp/urls ./temp/words')
 
 input('Press enter to clear temporary files.')
-os.system('rm fc meta urls words tempfile')
-print(allurls)
+os.system('rm ./temp/fc ./temp/meta ./temp/urls ./temp/words')

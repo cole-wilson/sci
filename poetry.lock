@@ -1,0 +1,14 @@
+[[package]]
+category = "main"
+description = "API rate limit decorator"
+name = "ratelimit"
+optional = false
+python-versions = "*"
+version = "2.2.1"
+
+[metadata]
+content-hash = "14568eb22f1b01daf279020ca6838044b1f683ed7c38fd25bd72feae9d822615"
+python-versions = "^3.7"
+
+[metadata.hashes]
+ratelimit = ["af8a9b64b821529aca09ebaf6d8d279100d766f19e90b5059ac6a718ca6dee42"]
